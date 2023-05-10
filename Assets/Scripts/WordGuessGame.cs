@@ -8,7 +8,7 @@ public class WordGuessGame : MonoBehaviour
     public InputField guessInput;
     public Button guessButton;
     public Text feedbackText;
-
+    public Text questText;
     private const int MAX_GUESSES = 10;
 
     private string[] words = { "apple", "banana", "cherry", "grape", "orange", "pear", "pineapple", "strawberry" };
@@ -67,6 +67,6 @@ public class WordGuessGame : MonoBehaviour
         lettersInWord = wordToGuess.Distinct().ToList();
         feedbackText.text = "Guess the word!";
 
-        Debug.Log($"The word to guess is {wordToGuess}");
+        questText.text = ($"The word to guess is {wordToGuess}");
     }
 }
